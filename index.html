@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!-- =========================
+    CONFIGURACIÓN BÁSICA
+    ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Corale | Café, Pastelería y Momentos
+    </title>
+    <meta name="description" content="Corale es un café en San Miguel de Tucumán donde el café, la pastelería y los buenos momentos se encuentran en un espacio para disfrutar sin apuro.">
+    <meta name="keywords" content="Corale, café, cafetería, pastelería, café de especialidad, San Miguel de Tucumán, Tucumán, desayunos, meriendas">
+    <meta name="author" content="Corale">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bruno-menorque.github.io/corale/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bruno-menorque.github.io/corale/">
+    <meta property="og:title" content="Corale | Café, Pastelería y Momentos">
+    <meta property="og:description" content="Café, pastelería y buenos momentos en un espacio para quedarse un rato. Conocé Corale en San Miguel de Tucumán.">
+    <meta property="og:image" content="https://bruno-menorque.github.io/corale/assets/images/og-image.jpg">
+    <meta property="og:image:alt" content="Corale | Café, Pastelería y Momentos">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bruno-menorque.github.io/corale/">
+    <meta name="twitter:title" content="Corale | Café, Pastelería y Momentos">
+    <meta name="twitter:description" content="Café, pastelería y buenos momentos en un espacio para quedarse un rato. Conocé Corale en San Miguel de Tucumán.">
+    <meta name="twitter:image" content="https://bruno-menorque.github.io/corale/assets/images/og-image.jpg">
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo y nombre de la cafetería -->
+            <a href="#inicio" class="navbar__brand">
+                <img src="assets/icons/logo.png" alt="Logo de Corale" class="navbar__logo"
+                >
+                <span class="navbar__name">Corale</span>
+            </a>
+            <!-- Navegación principal -->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#inicio" class="navbar__link">
+                        Inicio
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#menu" class="navbar__link">
+                        Menú
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#nosotros" class="navbar__link">
+                        Nosotros
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#visitanos" class="navbar__link">
+                        Visitanos
+                    </a>
+                </li>
+            </ul>
+            <button
+                type="button"
+                class="navbar__toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+                <span class="navbar__toggle-line"></span>
+                <span class="navbar__toggle-line"></span>
+                <span class="navbar__toggle-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section id="inicio" class="hero">
+            <!-- Video de fondo -->
+            <div class="hero__background">
+                <video
+                    class="hero__background-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    aria-label="Café humeante">
+                    <source src="assets/videos/hero-coffee.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+            <!-- Degradado sobre el video -->
+            <div class="hero__overlay"></div>
+            <!-- Contenido -->
+            <div class="hero__content">
+                <span class="hero__eyebrow">
+                    Café · Pastelería · Momentos
+                </span>
+                <h1 class="hero__title">
+                    Una pausa
+                    <br>
+                    para disfrutar.
+                </h1>
+                <p class="hero__description">
+                    Café, pastelería y buenos momentos
+                    <br>
+                    en un espacio para quedarse un rato.
+                </p>
+                <a href="#menu" class="hero__discover">
+                    <span class="hero__discover-text">
+                        Descubrí Corale
+                    </span>
+                </a>
+            </div>
+        </section>
+        <!-- =========================
+            MENÚ
+        ========================= -->
+        <section id="menu" class="menu reveal">
+            <!-- INTRO -->
+            <header class="menu__intro">
+                <span class="menu__eyebrow">
+                    Nuestra carta
+                </span>
+                <h2 class="menu__title">
+                    Algo rico para
+                    <br>
+                    cada momento.
+                </h2>
+                <p class="menu__description">
+                    Café, bebidas, pastelería y opciones saladas
+                    para disfrutar como más te guste.
+                </p>
+            </header>
+            <!-- =========================
+                RECOMENDACIONES
+            ========================= -->
+            <section class="menu__recommendations">
+                <div class="menu__recommendations-header">
+                    <span class="menu__eyebrow">
+                        Especiales Corale
+                    </span>
+                    <h3 class="menu__recommendations-title">
+                        Nuestras
+                        <br>
+                        recomendaciones
+                        <br>
+                        del día.
+                    </h3>
+                </div>
+                <!--
+                    Las 3 recomendaciones
+                    serán generadas desde JavaScript.
+                -->
+                <div
+                    class="menu__recommendations-grid"
+                    data-recommendations
+                ></div>
+            </section>
+            <!-- =========================
+                CATEGORÍAS
+            ========================= -->
+            <div class="menu__categories">
+                <!-- =====================
+                    CAFÉ
+                ====================== -->
+                <section
+                    class="menu-category menu-category--coffee reveal"
+                    data-menu-category="coffee">
+                    <header class="menu-category__header">
+                        <span class="menu__eyebrow">
+                            Café
+                        </span>
+                        <h3 class="menu-category__title">
+                            El corazón
+                            <br>
+                            de Corale.
+                        </h3>
+                        <p class="menu-category__description">
+                            Clásicos y favoritos preparados
+                            para disfrutar sin apuro.
+                        </p>
+                    </header>
+                    <div class="menu-category__content">
+                        <div class="menu-category__visual">
+                            <img
+                                src=""
+                                alt=""
+                                class="menu-category__image"
+                                data-menu-image>
+                        </div>
+                        <div
+                            class="menu-category__products"
+                            data-menu-products
+                        ></div>
+                        <div
+                            class="menu-category__product-info"
+                            data-menu-info>
+                            <p
+                                class="menu-category__product-description"
+                                data-menu-description
+                            ></p>
+                            <span
+                                class="menu-category__product-price"
+                                data-menu-price
+                            ></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- =====================
+                    BEBIDAS
+                ====================== -->
+                <section
+                    class="menu-category menu-category--drinks reveal"
+                    data-menu-category="drinks">
+                    <header class="menu-category__header">
+                        <span class="menu__eyebrow">
+                            Bebidas
+                        </span>
+                        <h3 class="menu-category__title">
+                            Algo fresco
+                            <br>
+                            para acompañar.
+                        </h3>
+                        <p class="menu-category__description">
+                            Opciones para cada momento,
+                            desde algo refrescante hasta algo calentito.
+                        </p>
+                    </header>
+                    <div class="menu-category__content">
+                        <div class="menu-category__visual_dark">
+                            <img
+                                src=""
+                                alt=""
+                                class="menu-category__image"
+                                data-menu-image
+                            >
+                        </div>
+                        <div
+                            class="menu-category__products"
+                            data-menu-products
+                        ></div>
+                        <div
+                            class="menu-category__product-info"
+                            data-menu-info>
+                            <p
+                                class="menu-category__product-description"
+                                data-menu-description
+                            ></p>
+                            <span
+                                class="menu-category__product-price-dark"
+                                data-menu-price
+                            ></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- =====================
+                    PASTELERÍA
+                ====================== -->
+                <section
+                    class="menu-category menu-category--bakery reveal"
+                    data-menu-category="bakery">
+                    <header class="menu-category__header">
+                        <span class="menu__eyebrow">
+                            Pastelería
+                        </span>
+                        <h3 class="menu-category__title">
+                            Hecho para
+                            <br>
+                            darse un gusto.
+                        </h3>
+                        <p class="menu-category__description">
+                            Dulces, horneados y pequeños
+                            placeres para acompañar tu café.
+                        </p>
+                    </header>
+                    <div class="menu-category__content">
+                        <div class="menu-category__visual">
+                            <img
+                                src=""
+                                alt=""
+                                class="menu-category__image"
+                                data-menu-image>
+                        </div>
+                        <div
+                            class="menu-category__products"
+                            data-menu-products
+                        ></div>
+                        <div
+                            class="menu-category__product-info"
+                            data-menu-info>
+                            <p
+                                class="menu-category__product-description"
+                                data-menu-description
+                            ></p>
+                            <span
+                                class="menu-category__product-price"
+                                data-menu-price
+                            ></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- =====================
+                    SALADO
+                ====================== -->
+                <section
+                    class="menu-category menu-category--savory reveal"
+                    data-menu-category="savory">
+                    <header class="menu-category__header">
+                        <span class="menu__eyebrow">
+                            Salado
+                        </span>
+                        <h3 class="menu-category__title">
+                            Para cuando
+                            <br>
+                            pinta algo más.
+                        </h3>
+                        <p class="menu-category__description">
+                            Opciones saladas, simples y ricas
+                            para acompañar cualquier momento del día.
+                        </p>
+                    </header>
+                    <div class="menu-category__content">
+                        <div class="menu-category__visual">
+                            <img
+                                src=""
+                                alt=""
+                                class="menu-category__image"
+                                data-menu-image
+                            >
+                        </div>
+                        <div
+                            class="menu-category__products"
+                            data-menu-products
+                        ></div>
+                        <div
+                            class="menu-category__product-info"
+                            data-menu-info
+                        >
+                            <p
+                                class="menu-category__product-description"
+                                data-menu-description
+                            ></p>
+                            <span
+                                class="menu-category__product-price"
+                                data-menu-price
+                            ></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- =========================
+                PREFERENCIAS ALIMENTARIAS
+            ========================= -->
+            <aside class="menu__dietary reveal">
+                <div
+                    class="menu__dietary-icon"
+                    aria-hidden="true"
+                >
+                    ✿
+                </div>
+                <div class="menu__dietary-content">
+                    <h3 class="menu__dietary-title">
+                        ¿Tenés alguna preferencia
+                        o restricción alimentaria?
+                    </h3>
+                    <p class="menu__dietary-description">
+                        Consultanos, tenemos opciones
+                        vegetarianas y sin gluten.
+                    </p>
+                </div>
+                <a
+                    href="#visitanos"
+                    class="menu__dietary-link"
+                >
+                    Hablá con nosotros
+                </a>
+            </aside>
+        </section>
+        <!-- =========================
+            NOSOTROS
+        ========================= -->
+        <section id="nosotros" class="about reveal">
+            <!-- =========================
+                INTRO
+            ========================= -->
+            <header class="about__intro">
+                <span class="about__eyebrow">
+                    Nosotros
+                </span>
+                <h2 class="about__title">
+                    Una historia que
+                    <br>
+                    se disfruta despacio.
+                </h2>
+            </header>
+            <!-- =========================
+                NUESTRA HISTORIA
+            ========================= -->
+            <section class="about__story">
+                <div class="about__story-content">
+                    <span class="about__eyebrow">
+                        Nuestra historia
+                    </span>
+                    <h3 class="about__story-title">
+                        Un café hecho
+                        <br>
+                        para compartir.
+                    </h3>
+                    <div class="about__story-text">
+                        <p>
+                            Corale nació de una idea simple:
+                            crear un lugar donde el café sea
+                            mucho más que una bebida.
+                        </p>
+                        <p>
+                            Un espacio para encontrarse,
+                            hacer una pausa y disfrutar
+                            de las pequeñas cosas.
+                        </p>
+                    </div>
+                </div>
+                <figure class="about__story-visual">
+                    <img
+                        src="assets/images/nosotros/nuestra-historia.jpg"
+                        alt="Interior de Corale"
+                        class="about__story-image"
+                        width="1535"
+                        height="1024">
+                </figure>
+            </section>
+            <!-- =========================
+                EL ESPACIO
+            ========================= -->
+            <section class="about__space reveal">
+                <div class="about__space-visual">
+                    <img
+                        src="assets/images/nosotros/el-espacio.jpg"
+                        alt="Espacio interior de Corale"
+                        class="about__space-image"
+                        width="1536"
+                        height="1024"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="about__space-card">
+                    <span class="about__eyebrow">
+                        El espacio
+                    </span>
+                    <h3 class="about__space-title">
+                        Un lugar para
+                        <br>
+                        quedarse un rato.
+                    </h3>
+                    <p class="about__space-description">
+                        Luz, café y pequeños detalles
+                        pensados para que cada visita
+                        se sienta como una pausa.
+                    </p>
+                </div>
+            </section>
+            <!-- =========================
+                CIERRE
+            ========================= -->
+            <div class="about__closing reveal">
+                <p class="about__closing-quote">
+                    Creemos en las pausas
+                    <br>
+                    que se disfrutan.
+                </p>
+                <span class="about__closing-signature">
+                    Corale · Café · Pastelería · Momentos
+                </span>
+            </div>
+        </section>
+        <!-- =========================
+            VISITANOS
+        ========================= -->
+        <section id="visitanos" class="visit reveal">
+            <!-- INTRO -->
+            <header class="visit__intro">
+                <span class="visit__eyebrow">
+                    Visitános
+                </span>
+                <h2 class="visit__title">
+                    Encontrá tu
+                    <br>
+                    pausa.
+                </h2>
+                <p class="visit__description">
+                    Estamos para recibirte, compartir un buen café
+                    y hacer que te quedes un rato más.
+                </p>
+            </header>
+            <!-- UBICACIÓN -->
+            <section class="visit__location">
+                <!-- MAPA -->
+                <div class="visit__map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Santiago+del+Estero+450,+San+Miguel+de+Tucumán,+Tucumán,+Argentina&output=embed"
+                        title="Ubicación de Corale"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <!-- INFORMACIÓN -->
+                <div class="visit__info">
+                    <span class="visit__eyebrow">
+                        Dónde estamos
+                    </span>
+                    <div class="visit__details">
+                        <!-- DIRECCIÓN -->
+                        <div class="visit__detail">
+                            <span class="visit__detail-label">
+                                Dirección
+                            </span>
+                            <p class="visit__detail-text">
+                                Santiago del Estero 450
+                                <br>
+                                San Miguel de Tucumán
+                            </p>
+                        </div>
+                        <!-- HORARIOS -->
+                        <div class="visit__detail">
+                            <span class="visit__detail-label">
+                                Horarios
+                            </span>
+                            <div class="visit__schedule">
+                                <p>
+                                    <span>
+                                        Lunes — Viernes
+                                    </span>
+                                    <span>
+                                        08:00 — 20:00
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        Sábado
+                                    </span>
+                                    <span>
+                                        09:00 — 21:00
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        Domingo
+                                    </span>
+                                    <span>
+                                        09:00 — 20:00
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- CONTACTO -->
+                        <div class="visit__detail reveal">
+                            <span class="visit__detail-label">
+                                Contacto
+                            </span>
+                            <a
+                                href="https://wa.me/5493815555555"
+                                class="visit__contact"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                +54 9 381 555-5555
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- REDES -->
+            <section class="visit__social">
+                <div class="visit__social-content">
+                    <span class="visit__eyebrow">
+                        Contacto
+                    </span>
+                    <h3 class="visit__social-title">
+                        ¿Tenés alguna
+                        <br>
+                        pregunta?
+                    </h3>
+                    <p class="visit__social-description">
+                        Escribinos, llamanos o encontranos
+                        en nuestras redes.
+                    </p>
+                </div>
+                <nav
+                    class="visit__social-links"
+                    aria-label="Redes sociales de Corale"
+                >
+                    <a
+                        href="https://wa.me/5493815555555"
+                        class="visit__social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>
+                            WhatsApp
+                        </span>
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/"
+                        class="visit__social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>
+                            Instagram
+                        </span>
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/"
+                        class="visit__social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>
+                            Facebook
+                        </span>
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                </nav>
+            </section>
+            <!-- CIERRE -->
+            <section class="visit__closing">
+                <h3 class="visit__closing-title">
+                    ¿Nos vemos
+                    <br>
+                    en Corale?
+                </h3>
+                <span class="visit__closing-signature">
+                    Corale · Café · Pastelería · Momentos
+                </span>
+            </section>
+        </section>
+    </main>
+
+    <!-- =========================
+        FOOTER
+    ========================= -->
+    <footer class="footer">
+        <div class="footer__main">
+            <!-- BRAND -->
+            <div class="footer__brand">
+                <a href="#inicio" class="footer__brand-link">
+                    <img
+                        src="assets/icons/logo.png"
+                        alt="Logo de Corale"
+                        class="footer__logo"
+                    >
+                    <span class="footer__name">
+                        Corale
+                    </span>
+                </a>
+                <p class="footer__tagline">
+                    Café, pastelería y momentos
+                    <br>
+                    para disfrutar despacio.
+                </p>
+            </div>
+            <!-- NAVIGATION -->
+            <nav
+                class="footer__navigation"
+                aria-label="Navegación del sitio"
+            >
+                <span class="footer__label">
+                    Navegación
+                </span>
+                <a
+                    href="#inicio"
+                    class="footer__link"
+                >
+                    Inicio
+                </a>
+                <a
+                    href="#menu"
+                    class="footer__link"
+                >
+                    Menú
+                </a>
+                <a
+                    href="#nosotros"
+                    class="footer__link"
+                >
+                    Nosotros
+                </a>
+                <a
+                    href="#visitanos"
+                    class="footer__link"
+                >
+                    Visitános
+                </a>
+            </nav>
+            <!-- SOCIAL -->
+            <div class="footer__social">
+                <span class="footer__label">
+                    Seguinos
+                </span>
+                <div class="footer__social-links">
+                    <a
+                        href="https://www.instagram.com/"
+                        class="footer__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+                    <a
+                        href="https://www.facebook.com/"
+                        class="footer__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
+                    <a
+                        href="https://wa.me/5493815555555"
+                        class="footer__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- BOTTOM -->
+        <div class="footer__bottom">
+            <span class="footer__copyright">
+                © 2026 Corale. Todos los derechos reservados.
+            </span>
+            <span class="footer__signature">
+                Café · Pastelería · Momentos
+            </span>
+        </div>
+    </footer>
+<script src="./js/main.js"></script>
+</body>
+</html>
